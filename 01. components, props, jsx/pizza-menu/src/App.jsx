@@ -1,5 +1,17 @@
 import pizzaData from "./data";
 
+function Header() {
+    return <h1>Fast React Pizza Co.</h1>;
+}
+function Menu() {
+    return (
+        <div>
+            <h2>Our Menu</h2>
+            <Pizza />
+        </div>
+    );
+}
+
 function Pizza() {
     return (
         <div>
@@ -10,14 +22,18 @@ function Pizza() {
     );
 }
 
+function Footer() {
+    return (
+        <footer>{new Date().toLocaleTimeString}We are currently open</footer>
+    );
+}
+
 function App() {
     return (
         <div>
-            <h1>Pizza</h1>
-            <Pizza />
-            <Pizza />
-            <Pizza />
-            <Pizza />
+            <Header />
+            <Menu />
+            <Footer />
         </div>
     );
 }
