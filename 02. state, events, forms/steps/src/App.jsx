@@ -12,13 +12,13 @@ function App() {
 
     function handlePrev() {
         if (step > 1) {
-            setStep(step - 1);
+            setStep((currentStep) => currentStep - 1);
         }
     }
 
     function handleNext() {
         if (step < messages.length) {
-            setStep(step + 1);
+            setStep((currentStep) => currentStep + 1);
         }
     }
 
